@@ -2,7 +2,13 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { useLanguage } from "../i18n";
 import { PortfolioLayout } from "../layouts/PortfolioLayout";
+import { AboutSection } from "../sections/AboutSection";
+import { ArchitectureSection } from "../sections/ArchitectureSection";
+import { BentoSection } from "../sections/BentoSection";
+import { ContactSection } from "../sections/ContactSection";
 import { HeroSection } from "../sections/HeroSection";
+import { ProjectsSection } from "../sections/ProjectsSection";
+import { StackSection } from "../sections/StackSection";
 import { useTheme } from "../theme";
 
 export function App() {
@@ -24,6 +30,12 @@ export function App() {
       skipToContentLabel={translation.header.skipToContent}
     >
       <HeroSection content={translation.hero} />
+      <AboutSection content={translation.about} />
+      <BentoSection content={translation.bento} />
+      <ProjectsSection content={translation.projects} />
+      <StackSection content={translation.stack} />
+      <ArchitectureSection content={translation.architecture} />
+      <ContactSection content={translation.contact} />
     </PortfolioLayout>
   );
 }

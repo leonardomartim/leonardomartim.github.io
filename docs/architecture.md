@@ -48,14 +48,15 @@ src/
 ## Current Implementation Scope
 
 - `app/`, `layouts/`, and `sections/` compose the portfolio layout shell: header,
-  main content region, introductory hero, and footer. Additional portfolio sections
-  remain planned.
+  main content region, hero, About, Bento grid, Projects, Stack, Architecture / Agents,
+  Contact, and footer. Each section receives typed localized content from the app layer.
 - `i18n/` provides typed PT-BR and EN-US content, language metadata, and a local
   language hook. The selected language persists in `localStorage`.
 - `components/` contains reusable layout primitives plus the language and theme controls.
 - `theme/` provides typed theme definitions, CSS-variable application, `localStorage`
   persistence, and a React hook for current theme state.
-- `data/`, `hooks/`, `lib/`, and `utils/` are reserved for their respective feature work.
+- `data/stack.ts` holds language-independent technology groups used by the Stack section.
+  `hooks/`, `lib/`, and `utils/` are reserved for their respective feature work.
 
 ## Constraints
 

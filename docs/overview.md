@@ -12,9 +12,11 @@ The project is in its initial baseline:
 - `@tailwindcss/vite` is configured in `vite.config.ts`.
 - `src/index.css` imports Tailwind with `@import "tailwindcss";`.
 - GitHub Pages deployment workflow exists in `.github/workflows/deploy.yml`.
-- Portfolio content and UI sections are planned, not complete.
+- The header, hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact,
+  and footer sections are implemented with responsive, localized base content.
+- Project case studies and public contact details remain in progress and are marked in the UI.
 
-## Planned Sections
+## Implemented Sections
 
 - Header
 - Hero
@@ -25,6 +27,11 @@ The project is in its initial baseline:
 - Architecture / Agents
 - Contact
 - Footer
+
+## Planned Content
+
+- Detailed project case studies
+- Public contact channels
 
 ## Planned Behavior
 

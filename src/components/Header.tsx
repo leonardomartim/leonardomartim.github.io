@@ -24,7 +24,7 @@ export function Header({
   return (
     <header className="border-b border-[var(--color-border)] bg-[var(--color-background)]">
       <Container className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex items-center justify-between gap-5">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
           <a
             className="text-sm font-semibold tracking-tight text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ring)]"
             href="#intro"
@@ -32,7 +32,7 @@ export function Header({
             Leonardo Martim
           </a>
           <nav aria-label={translation.header.navigationLabel}>
-            <ul className="flex items-center gap-4 text-sm text-[var(--color-text-muted)]">
+            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--color-text-muted)]">
               {navigationItems.map((item) => (
                 <li key={item.href}>
                   <a
