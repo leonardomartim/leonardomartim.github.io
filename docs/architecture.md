@@ -10,9 +10,11 @@ The project uses a static frontend architecture for GitHub Pages.
 - Styling: Tailwind CSS v4 through `@tailwindcss/vite`
 - Deployment target: GitHub Pages user site at the repository root path
 
-The current `src/` tree is minimal and does not yet implement the planned portfolio architecture.
+The base source architecture is in place. It provides a small app composition path and
+keeps the existing baseline page available while the portfolio is implemented section by
+section.
 
-## Planned Source Structure
+## Source Structure
 
 ```text
 src/
@@ -42,6 +44,13 @@ src/
 - `lib/`: non-React helpers
 - `types/`: shared TypeScript types
 - `utils/`: generic utilities
+
+## Current Implementation Scope
+
+- `app/`, `layouts/`, and `sections/` compose the temporary baseline page.
+- `data/` and `types/` hold the baseline content and its shared type.
+- `components/`, `hooks/`, `i18n/`, `lib/`, `theme/`, and `utils/` are reserved for
+  their respective feature work; no portfolio features are implemented in them yet.
 
 ## Constraints
 
