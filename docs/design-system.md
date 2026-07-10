@@ -21,8 +21,8 @@ The design system is planned and should be implemented incrementally with the po
 Theme values are represented by semantic CSS variables. Components should consume those
 variables instead of hardcoded palettes whenever theme behavior is needed.
 
-The temporary baseline includes a theme selector only to demonstrate and validate the
-foundation. Final themed visual design and portfolio components remain planned.
+The layout shell places the theme selector in the header alongside the language
+selector. Final themed visual design and the remaining portfolio components remain planned.
 
 ## UI Principles
 

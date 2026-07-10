@@ -2,12 +2,13 @@ import { themeList, type ThemeName } from "../theme";
 
 type ThemeToggleProps = {
   currentTheme: ThemeName;
+  label: string;
   onThemeChange: (theme: ThemeName) => void;
 };
 
-export function ThemeToggle({ currentTheme, onThemeChange }: ThemeToggleProps) {
+export function ThemeToggle({ currentTheme, label, onThemeChange }: ThemeToggleProps) {
   return (
-    <div aria-label="Theme" className="flex flex-wrap gap-2" role="group">
+    <div aria-label={label} className="flex flex-wrap gap-2" role="group">
       {themeList.map((theme) => {
         const isActive = theme.id === currentTheme;
 
