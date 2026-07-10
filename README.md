@@ -1,75 +1,41 @@
-# React + TypeScript + Vite
+# Leonardo Martim Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Leonardo Martim, built as a GitHub Pages user site.
 
-Currently, two official plugins are available:
+## Current Baseline
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite, React, and TypeScript project scaffold.
+- Tailwind CSS v4 configured through `@tailwindcss/vite`.
+- GitHub Actions workflow for GitHub Pages deployment.
+- Application UI is still planned; do not treat portfolio sections as complete yet.
 
-## React Compiler
+## Planned Product Scope
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The portfolio is planned to include Header, Hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact, and Footer sections.
 
-## Expanding the ESLint configuration
+Planned behavior includes PT-BR / EN-US language toggle, four visual themes, manual typewriter mode toggle, responsive layout, accessible navigation, SEO metadata, and GitHub Pages deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
+npm run lint
+npm run build
+npm run preview
 ```
+
+## Documentation
+
+- [Overview](docs/overview.md)
+- [Architecture](docs/architecture.md)
+- [Development workflow](docs/development-workflow.md)
+- [Design system](docs/design-system.md)
+- [AI-assisted development](docs/ai-assisted-development.md)
+- [Deployment](docs/deployment.md)
+- [Architecture decisions](docs/decisions/)
