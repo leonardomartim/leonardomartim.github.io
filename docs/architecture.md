@@ -48,9 +48,11 @@ src/
 ## Current Implementation Scope
 
 - `app/`, `layouts/`, and `sections/` compose the temporary baseline page.
-- `data/` and `types/` hold the baseline content and its shared type.
-- `components/`, `hooks/`, `i18n/`, `lib/`, `theme/`, and `utils/` are reserved for
-  their respective feature work; no portfolio features are implemented in them yet.
+- `i18n/` provides typed PT-BR and EN-US content, language metadata, and a local
+  language hook. The selected language persists in `localStorage`.
+- `components/` contains the language-toggle foundation used by the baseline page.
+- `data/`, `hooks/`, `lib/`, `theme/`, and `utils/` are reserved for their respective
+  feature work; no portfolio features are implemented in them yet.
 
 ## Constraints
 
