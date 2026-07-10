@@ -1,19 +1,21 @@
 function App() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-50">
-      <section className="mx-auto flex min-h-screen max-w-5xl flex-col items-start justify-center px-6">
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-400">
-          Portfolio
-        </p>
-
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
+    <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100">
+      <section className="mx-auto flex max-w-3xl flex-col gap-6">
+        <p className="text-sm font-medium uppercase tracking-wide text-cyan-300">
           Leonardo Martim
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-          Backend development, API design, software architecture, agile planning
-          and AI-assisted engineering.
         </p>
+        <div className="space-y-4">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            Backend developer focused on APIs, architecture, and AI-assisted
+            delivery.
+          </h1>
+          <p className="max-w-2xl text-lg leading-8 text-slate-300">
+            Portfolio baseline in progress. The full experience will add
+            bilingual content, themed UI, selected projects, and engineering
+            workflow details.
+          </p>
+        </div>
       </section>
     </main>
   );
