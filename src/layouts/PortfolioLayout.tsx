@@ -6,7 +6,7 @@ type PortfolioLayoutProps = {
 
 export function PortfolioLayout({ children }: PortfolioLayoutProps) {
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100">
+    <main className="min-h-screen bg-[var(--color-background)] px-6 py-16 text-[var(--color-text)] transition-colors">
       {children}
     </main>
   );

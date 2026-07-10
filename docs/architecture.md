@@ -51,8 +51,9 @@ src/
 - `i18n/` provides typed PT-BR and EN-US content, language metadata, and a local
   language hook. The selected language persists in `localStorage`.
 - `components/` contains the language-toggle foundation used by the baseline page.
-- `data/`, `hooks/`, `lib/`, `theme/`, and `utils/` are reserved for their respective
-  feature work; no portfolio features are implemented in them yet.
+- `theme/` provides typed theme definitions, CSS-variable application, `localStorage`
+  persistence, and a React hook for current theme state.
+- `data/`, `hooks/`, `lib/`, and `utils/` are reserved for their respective feature work.
 
 ## Constraints
 

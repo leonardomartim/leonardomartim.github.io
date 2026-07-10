@@ -7,16 +7,22 @@ The design system is planned and should be implemented incrementally with the po
 - Tailwind CSS v4 is available.
 - Global CSS lives in `src/index.css`.
 - Tailwind is loaded with `@import "tailwindcss";`.
-- No complete theme system or component set exists yet.
+- The theme foundation is implemented with semantic CSS variables in `src/index.css`.
+- `src/theme/` owns the four typed theme definitions, DOM application, persistence, and
+  current-theme hook.
 
-## Planned Themes
+## Theme Foundation
 
 - Alpine
 - Paperwarm
 - Graphite
 - Terminal
 
-Theme values should be represented with CSS variables and mapped through global CSS. Components should consume semantic variables instead of hardcoded palettes when theme behavior is needed.
+Theme values are represented by semantic CSS variables. Components should consume those
+variables instead of hardcoded palettes whenever theme behavior is needed.
+
+The temporary baseline includes a theme selector only to demonstrate and validate the
+foundation. Final themed visual design and portfolio components remain planned.
 
 ## UI Principles
 

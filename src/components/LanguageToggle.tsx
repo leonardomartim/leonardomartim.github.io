@@ -16,7 +16,7 @@ export function LanguageToggle({
       {(Object.keys(languages) as Language[]).map((language) => (
         <button
           aria-pressed={language === currentLanguage}
-          className="rounded border border-slate-700 px-3 py-1 text-sm font-medium text-slate-100 transition-colors hover:border-cyan-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+          className="rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)]"
           key={language}
           onClick={() => onLanguageChange(language)}
           type="button"
