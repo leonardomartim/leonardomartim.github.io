@@ -43,6 +43,16 @@ selector. Final themed visual design and the remaining portfolio components rema
 - Supporting information uses muted surfaces and accent borders rather than decorative
   effects, keeping all four themes visually consistent.
 
+## Typewriter Focus Mode
+
+- The header offers an explicit action that opens a separate, document-like focus view.
+- The normal portfolio and hero remain static and unchanged while the mode is closed.
+- The modal uses native dialog behavior for focus containment, keyboard access, and
+  Escape-to-close support.
+- Only supporting copy inside the document is typed. Its full footprint and accessible
+  text remain available throughout the effect.
+- Reduced-motion preferences render the complete document copy without animation.
+
 ## Styling Rules
 
 - Use Tailwind utilities for layout and component styling.

@@ -10,6 +10,12 @@ export type Translation = {
   languageToggle: {
     label: string;
   };
+  typewriter: {
+    buttonLabel: string;
+    closeLabel: string;
+    modeLabel: string;
+    openLabel: string;
+  };
   navigation: {
     intro: string;
     about: string;
@@ -75,6 +81,12 @@ export const translations: Record<Language, Translation> = {
     },
     languageToggle: {
       label: "Selecionar idioma",
+    },
+    typewriter: {
+      buttonLabel: "Digitação",
+      closeLabel: "Fechar modo de digitação",
+      modeLabel: "Modo de escrita",
+      openLabel: "Abrir modo de digitação",
     },
     navigation: {
       intro: "Início",
@@ -154,6 +166,12 @@ export const translations: Record<Language, Translation> = {
     },
     languageToggle: {
       label: "Select language",
+    },
+    typewriter: {
+      buttonLabel: "Writing",
+      closeLabel: "Close typing mode",
+      modeLabel: "Writing mode",
+      openLabel: "Open typing mode",
     },
     navigation: {
       intro: "Home",
