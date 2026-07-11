@@ -33,6 +33,16 @@ selector. Final themed visual design and the remaining portfolio components rema
 - Use responsive constraints so text and controls do not overlap.
 - Use Lucide React icons for recognizable interface actions when icons are needed.
 
+## Layout and Type
+
+- The shared content container is capped at `76rem`, with responsive inline padding.
+- Hero typography uses a fluid display scale with a constrained measure to preserve a
+  clear reading order across mobile and desktop layouts.
+- The hero fills the available first screen on large viewports and returns to content-led
+  spacing on smaller screens where the header height varies.
+- Supporting information uses muted surfaces and accent borders rather than decorative
+  effects, keeping all four themes visually consistent.
+
 ## Styling Rules
 
 - Use Tailwind utilities for layout and component styling.

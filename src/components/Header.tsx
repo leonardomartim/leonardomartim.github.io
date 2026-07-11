@@ -23,20 +23,20 @@ export function Header({
 }: HeaderProps) {
   return (
     <header className="border-b border-[var(--color-border)] bg-[var(--color-background)]">
-      <Container className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+      <Container className="flex flex-col gap-4 py-4 lg:min-h-20 lg:flex-row lg:items-center lg:justify-between lg:py-3">
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
           <a
-            className="text-sm font-semibold tracking-tight text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ring)]"
+            className="text-sm font-semibold tracking-[-0.01em] text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ring)]"
             href="#intro"
           >
             Leonardo Martim
           </a>
           <nav aria-label={translation.header.navigationLabel}>
-            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--color-text-muted)]">
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[var(--color-text-muted)]">
               {navigationItems.map((item) => (
                 <li key={item.href}>
                   <a
-                    className="rounded-sm hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ring)]"
+                    className="rounded-sm transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ring)]"
                     href={item.href}
                   >
                     {translation.navigation[item.labelKey]}

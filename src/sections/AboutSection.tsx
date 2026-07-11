@@ -7,7 +7,7 @@ type AboutSectionProps = {
 
 export function AboutSection({ content }: AboutSectionProps) {
   return (
-    <section aria-labelledby="about-title" className="border-t border-[var(--color-border)] py-16 sm:py-20" id="about">
+    <section aria-labelledby="about-title" className="py-16 sm:py-20 lg:py-24" id="about">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(18rem,0.7fr)] lg:gap-16">
           <div>
