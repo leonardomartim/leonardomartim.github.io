@@ -10,6 +10,11 @@ export type Translation = {
   languageToggle: {
     label: string;
   };
+  typewriterToggle: {
+    disableLabel: string;
+    enableLabel: string;
+    label: string;
+  };
   navigation: {
     intro: string;
     about: string;
@@ -75,6 +80,11 @@ export const translations: Record<Language, Translation> = {
     },
     languageToggle: {
       label: "Selecionar idioma",
+    },
+    typewriterToggle: {
+      disableLabel: "Desativar efeito de digitação",
+      enableLabel: "Ativar efeito de digitação",
+      label: "Digitação",
     },
     navigation: {
       intro: "Início",
@@ -154,6 +164,11 @@ export const translations: Record<Language, Translation> = {
     },
     languageToggle: {
       label: "Select language",
+    },
+    typewriterToggle: {
+      disableLabel: "Disable typing effect",
+      enableLabel: "Enable typing effect",
+      label: "Typing",
     },
     navigation: {
       intro: "Home",

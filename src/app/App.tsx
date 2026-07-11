@@ -1,6 +1,7 @@
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { useLanguage } from "../i18n";
+import { useTypewriterMode } from "../hooks/useTypewriterMode";
 import { PortfolioLayout } from "../layouts/PortfolioLayout";
 import { AboutSection } from "../sections/AboutSection";
 import { ArchitectureSection } from "../sections/ArchitectureSection";
@@ -14,6 +15,7 @@ import { useTheme } from "../theme";
 export function App() {
   const { language, setLanguage, translation } = useLanguage();
   const { theme, setTheme } = useTheme();
+  const { typewriterEnabled, setTypewriterMode } = useTypewriterMode();
 
   return (
     <PortfolioLayout
@@ -24,12 +26,14 @@ export function App() {
           currentTheme={theme}
           onLanguageChange={setLanguage}
           onThemeChange={setTheme}
+          onTypewriterChange={setTypewriterMode}
           translation={translation}
+          typewriterEnabled={typewriterEnabled}
         />
       }
       skipToContentLabel={translation.header.skipToContent}
     >
-      <HeroSection content={translation.hero} />
+      <HeroSection content={translation.hero} typewriterEnabled={typewriterEnabled} />
       <AboutSection content={translation.about} />
       <BentoSection content={translation.bento} />
       <ProjectsSection content={translation.projects} />
