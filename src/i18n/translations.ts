@@ -11,7 +11,6 @@ export type Translation = {
     label: string;
   };
   typewriter: {
-    buttonLabel: string;
     closeLabel: string;
     modeLabel: string;
     openLabel: string;
@@ -83,7 +82,6 @@ export const translations: Record<Language, Translation> = {
       label: "Selecionar idioma",
     },
     typewriter: {
-      buttonLabel: "Digitação",
       closeLabel: "Fechar modo de digitação",
       modeLabel: "Modo de escrita",
       openLabel: "Abrir modo de digitação",
@@ -168,7 +166,6 @@ export const translations: Record<Language, Translation> = {
       label: "Select language",
     },
     typewriter: {
-      buttonLabel: "Writing",
       closeLabel: "Close typing mode",
       modeLabel: "Writing mode",
       openLabel: "Open typing mode",

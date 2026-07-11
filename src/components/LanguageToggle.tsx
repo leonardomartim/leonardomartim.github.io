@@ -12,11 +12,15 @@ export function LanguageToggle({
   onLanguageChange,
 }: LanguageToggleProps) {
   return (
-    <div aria-label={label} className="flex gap-2" role="group">
+    <div
+      aria-label={label}
+      className="inline-flex rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] p-0.5"
+      role="group"
+    >
       {(Object.keys(languages) as Language[]).map((language) => (
         <button
           aria-pressed={language === currentLanguage}
-          className="rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)]"
+          className="rounded px-2.5 py-1 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)] aria-pressed:bg-[var(--color-accent-muted)] aria-pressed:text-[var(--color-text)]"
           key={language}
           onClick={() => onLanguageChange(language)}
           type="button"

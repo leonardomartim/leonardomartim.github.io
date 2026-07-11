@@ -51,7 +51,7 @@ export function Header({
         </div>
         <div
           aria-label={translation.header.preferencesLabel}
-          className="flex flex-wrap items-center gap-3"
+          className="flex flex-wrap items-center gap-2"
           role="group"
         >
           <LanguageToggle
@@ -59,16 +59,12 @@ export function Header({
             label={translation.languageToggle.label}
             onLanguageChange={onLanguageChange}
           />
-          <TypewriterButton
-            label={translation.typewriter.buttonLabel}
-            onOpen={onTypewriterOpen}
-            openLabel={translation.typewriter.openLabel}
-          />
           <ThemeToggle
             currentTheme={currentTheme}
             label={translation.header.themeLabel}
             onThemeChange={onThemeChange}
           />
+          <TypewriterButton onOpen={onTypewriterOpen} openLabel={translation.typewriter.openLabel} />
         </div>
       </Container>
     </header>

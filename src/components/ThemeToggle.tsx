@@ -8,14 +8,18 @@ type ThemeToggleProps = {
 
 export function ThemeToggle({ currentTheme, label, onThemeChange }: ThemeToggleProps) {
   return (
-    <div aria-label={label} className="flex flex-wrap gap-2" role="group">
+    <div
+      aria-label={label}
+      className="inline-flex flex-wrap rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] p-0.5"
+      role="group"
+    >
       {themeList.map((theme) => {
         const isActive = theme.id === currentTheme;
 
         return (
           <button
             aria-pressed={isActive}
-            className="rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)] aria-pressed:border-[var(--color-accent)] aria-pressed:bg-[var(--color-accent-muted)]"
+            className="rounded px-2.5 py-1 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)] aria-pressed:bg-[var(--color-accent-muted)] aria-pressed:text-[var(--color-text)]"
             key={theme.id}
             onClick={() => onThemeChange(theme.id)}
             type="button"
