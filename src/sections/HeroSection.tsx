@@ -1,28 +1,11 @@
 import type { Translation } from "../i18n";
 import { Container } from "../components/Container";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { useTypewriter } from "../hooks/useTypewriter";
 
 type HeroSectionProps = {
   content: Translation["hero"];
-  typewriterEnabled: boolean;
 };
 
-function AnimatedHeadline({ text }: { text: string }) {
-  const { displayedText, isAnimating } = useTypewriter(text);
-
-  return (
-    <span aria-hidden="true" className="absolute inset-0">
-      {displayedText}
-      {isAnimating && <span className="text-[var(--color-accent)]">_</span>}
-    </span>
-  );
-}
-
-export function HeroSection({ content, typewriterEnabled }: HeroSectionProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const shouldRenderTypewriter = typewriterEnabled && !prefersReducedMotion;
-
+export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section
       aria-labelledby="hero-title"
@@ -35,14 +18,10 @@ export function HeroSection({ content, typewriterEnabled }: HeroSectionProps) {
             {content.eyebrow}
           </p>
           <h1
-            aria-label={content.title}
-            className="relative max-w-[17ch] text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02] font-semibold tracking-[-0.045em] text-balance"
+            className="max-w-[17ch] text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02] font-semibold tracking-[-0.045em] text-balance"
             id="hero-title"
           >
-            <span aria-hidden="true" className={shouldRenderTypewriter ? "invisible" : undefined}>
-              {content.title}
-            </span>
-            {shouldRenderTypewriter && <AnimatedHeadline key={content.title} text={content.title} />}
+            {content.title}
           </h1>
           <p className="mt-7 max-w-[42rem] text-lg leading-8 text-[var(--color-text-muted)] sm:mt-8 sm:text-xl sm:leading-9">
             {content.description}

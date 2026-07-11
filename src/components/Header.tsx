@@ -5,16 +5,13 @@ import { navigationItems } from "../data/navigation";
 import { Container } from "./Container";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
-import { TypewriterToggle } from "./TypewriterToggle";
 
 type HeaderProps = {
   currentLanguage: Language;
   currentTheme: ThemeName;
   onLanguageChange: (language: Language) => void;
   onThemeChange: (theme: ThemeName) => void;
-  onTypewriterChange: (enabled: boolean) => void;
   translation: Translation;
-  typewriterEnabled: boolean;
 };
 
 export function Header({
@@ -22,9 +19,7 @@ export function Header({
   currentTheme,
   onLanguageChange,
   onThemeChange,
-  onTypewriterChange,
   translation,
-  typewriterEnabled,
 }: HeaderProps) {
   return (
     <header className="border-b border-[var(--color-border)] bg-[var(--color-background)]">
@@ -60,13 +55,6 @@ export function Header({
             currentLanguage={currentLanguage}
             label={translation.languageToggle.label}
             onLanguageChange={onLanguageChange}
-          />
-          <TypewriterToggle
-            disableLabel={translation.typewriterToggle.disableLabel}
-            enableLabel={translation.typewriterToggle.enableLabel}
-            enabled={typewriterEnabled}
-            label={translation.typewriterToggle.label}
-            onChange={onTypewriterChange}
           />
           <ThemeToggle
             currentTheme={currentTheme}

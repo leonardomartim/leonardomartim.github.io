@@ -43,14 +43,6 @@ selector. Final themed visual design and the remaining portfolio components rema
 - Supporting information uses muted surfaces and accent borders rather than decorative
   effects, keeping all four themes visually consistent.
 
-## Typewriter Mode
-
-- The hero headline can be typed progressively through an explicit header preference.
-- The preference is disabled by default and persists locally between visits.
-- The complete headline remains reserved in the layout and available to assistive
-  technology while the visible text is typing.
-- Reduced-motion preferences always produce static text, regardless of the saved mode.
-
 ## Styling Rules
 
 - Use Tailwind utilities for layout and component styling.
