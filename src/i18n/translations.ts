@@ -26,6 +26,9 @@ export type Translation = {
   hero: {
     eyebrow: string;
     title: string;
+    titleKeywords: string[];
+    titlePrefix: string;
+    titleSuffix: string;
     description: string;
     notice: string;
   };
@@ -97,6 +100,9 @@ export const translations: Record<Language, Translation> = {
     hero: {
       eyebrow: "Leonardo Martim · Desenvolvimento de software",
       title: "Backend, APIs e arquitetura para produtos que precisam evoluir bem.",
+      titleKeywords: ["evoluir", "escalar", "crescer", "amadurecer", "integrar"],
+      titlePrefix: "Backend, APIs e arquitetura para produtos que precisam ",
+      titleSuffix: " bem.",
       description:
         "Desenvolvedor backend focado em desenhar sistemas claros, integrações confiáveis e entregas com apoio de IA de forma responsável.",
       notice:
@@ -181,6 +187,9 @@ export const translations: Record<Language, Translation> = {
     hero: {
       eyebrow: "Leonardo Martim · Software development",
       title: "Backend, APIs, and architecture for products built to evolve.",
+      titleKeywords: ["evolve", "scale", "grow", "mature", "integrate"],
+      titlePrefix: "Backend, APIs, and architecture for products built to ",
+      titleSuffix: ".",
       description:
         "Backend developer focused on clear systems, reliable integrations, and responsible AI-assisted delivery.",
       notice:

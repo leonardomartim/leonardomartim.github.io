@@ -46,7 +46,9 @@ selector. Final themed visual design and the remaining portfolio components rema
 ## Typewriter Focus Mode
 
 - The header offers an explicit action that opens a separate, document-like focus view.
-- The normal portfolio and hero remain static and unchanged while the mode is closed.
+- The hero cycles only its highlighted keyword with a restrained erase-and-type cadence;
+  the rest of the headline remains static and its longest localized word reserves layout space.
+- The keyword interaction and focus mode both render static content when reduced motion is preferred.
 - The modal uses native dialog behavior for focus containment, keyboard access, and
   Escape-to-close support.
 - Only supporting copy inside the document is typed. Its full footprint and accessible
