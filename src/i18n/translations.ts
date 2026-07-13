@@ -99,10 +99,10 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       eyebrow: "Leonardo Martim · Desenvolvimento de software",
-      title: "Backend, APIs e arquitetura para produtos que precisam evoluir bem.",
+      title: "Backend, APIs e arquitetura para produtos que precisam evoluir.",
       titleKeywords: ["evoluir", "escalar", "crescer", "amadurecer", "integrar"],
       titlePrefix: "Backend, APIs e arquitetura para produtos que precisam ",
-      titleSuffix: " bem.",
+      titleSuffix: ".",
       description:
         "Desenvolvedor backend focado em desenhar sistemas claros, integrações confiáveis e entregas com apoio de IA de forma responsável.",
       notice:
