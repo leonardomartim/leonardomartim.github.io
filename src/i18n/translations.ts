@@ -46,14 +46,23 @@ export type Translation = {
     eyebrow: string;
     title: string;
     description: string;
-    plannedLabel: string;
-    progressLabel: string;
-    items: Array<{ title: string; description: string; status: "planned" | "inProgress" }>;
+    fields: {
+      problem: string;
+      context: string;
+      responsibilities: string;
+      architectureDecisions: string;
+      technologies: string;
+      tradeOffs: string;
+      validation: string;
+      links: string;
+    };
+    statusLabels: Record<"planned" | "inProgress" | "prototype" | "pendingContent", string>;
   };
   stack: {
     eyebrow: string;
     title: string;
     description: string;
+    groupLabels: Record<"foundation" | "presentation" | "quality" | "delivery", string>;
   };
   architecture: {
     eyebrow: string;
@@ -126,28 +135,36 @@ export const translations: Record<Language, Translation> = {
     },
     projects: {
       eyebrow: "Projetos",
-      title: "Casos em preparação para publicação.",
-      description: "Os próximos estudos de caso vão detalhar contexto, decisões técnicas e aprendizados sem expor informações confidenciais.",
-      plannedLabel: "Planejado",
-      progressLabel: "Em andamento",
-      items: [
-        { title: "Estudo de caso de API", description: "Documentação de uma abordagem de API orientada a contratos e manutenção.", status: "inProgress" },
-        { title: "Fluxo de integração", description: "Exemplo prático de integração entre serviços, com foco em confiabilidade e observabilidade.", status: "planned" },
-      ],
+      title: "Estudos de caso com evidências verificáveis.",
+      description: "Cada caso separa contexto, decisões, limites e validação. Experiências profissionais externas permanecem pendentes até que conteúdo real possa ser publicado.",
+      fields: {
+        problem: "Problema",
+        context: "Contexto",
+        responsibilities: "Responsabilidades",
+        architectureDecisions: "Decisões de arquitetura",
+        technologies: "Tecnologias",
+        tradeOffs: "Trade-offs",
+        validation: "Validação",
+        links: "Links",
+      },
+      statusLabels: { planned: "Planejado", inProgress: "Em andamento", prototype: "Protótipo", pendingContent: "Conteúdo pendente" },
     },
     stack: {
       eyebrow: "Stack",
       title: "Tecnologias que orientam meus estudos e entregas.",
-      description: "Esta lista representa áreas de trabalho e aprendizado contínuo; detalhes de experiência por projeto serão adicionados aos estudos de caso.",
+      description: "Agrupadas pelo uso prático comprovado neste repositório; experiência externa por tecnologia permanece pendente de estudos de caso reais.",
+      groupLabels: { foundation: "Base da interface", presentation: "Interação e apresentação", quality: "Qualidade e revisão", delivery: "Entrega" },
     },
     architecture: {
       eyebrow: "Arquitetura e agentes",
       title: "IA como apoio ao raciocínio, não substituto de responsabilidade.",
-      description: "Uso ferramentas assistidas por IA para acelerar exploração, revisão e documentação, mantendo decisões técnicas, validação e contexto sob controle humano.",
+      description: "O fluxo real combina regras em AGENTS.md, decisões em ADRs, implementação assistida por Codex, validação local, revisão humana e publicação pelo GitHub Actions.",
       steps: [
-        { title: "Contextualizar", description: "Definir objetivo, restrições e critérios de aceitação antes de delegar uma tarefa." },
-        { title: "Verificar", description: "Revisar resultados, testar hipóteses e confirmar impactos antes de incorporar mudanças." },
-        { title: "Registrar", description: "Transformar decisões e aprendizados em documentação que o time possa reutilizar." },
+        { title: "Regras e contexto", description: "AGENTS.md define escopo, stack, acessibilidade, documentação e critérios de validação." },
+        { title: "Decisões registradas", description: "ADRs documentam escolhas como Vite, Tailwind v4, i18n local, GitHub Pages e Codex." },
+        { title: "Implementação assistida", description: "Codex inspeciona o repositório e propõe mudanças pequenas dentro das restrições definidas." },
+        { title: "Validação e revisão", description: "ESLint e build TypeScript verificam a mudança; a revisão humana confirma conteúdo e impacto." },
+        { title: "Entrega", description: "Após aprovação e push na main, o GitHub Actions constrói e publica o artefato no GitHub Pages." },
       ],
     },
     contact: {
@@ -213,28 +230,36 @@ export const translations: Record<Language, Translation> = {
     },
     projects: {
       eyebrow: "Projects",
-      title: "Case studies being prepared for publication.",
-      description: "The next case studies will cover context, technical decisions, and lessons learned without exposing confidential information.",
-      plannedLabel: "Planned",
-      progressLabel: "In progress",
-      items: [
-        { title: "API case study", description: "Documentation of a contract-first API approach designed for long-term maintenance.", status: "inProgress" },
-        { title: "Integration flow", description: "A practical service-integration example focused on reliability and observability.", status: "planned" },
-      ],
+      title: "Case studies backed by verifiable evidence.",
+      description: "Each case separates context, decisions, constraints, and validation. External professional experience remains pending until real content can be published.",
+      fields: {
+        problem: "Problem",
+        context: "Context",
+        responsibilities: "Responsibilities",
+        architectureDecisions: "Architecture decisions",
+        technologies: "Technologies",
+        tradeOffs: "Trade-offs",
+        validation: "Validation",
+        links: "Links",
+      },
+      statusLabels: { planned: "Planned", inProgress: "In progress", prototype: "Prototype", pendingContent: "Content pending" },
     },
     stack: {
       eyebrow: "Stack",
       title: "Technologies that guide my learning and delivery work.",
-      description: "This list represents active work and continuous-learning areas; project-level experience details will be added to case studies.",
+      description: "Grouped by practical use demonstrated in this repository; external experience by technology remains pending real case studies.",
+      groupLabels: { foundation: "Interface foundation", presentation: "Interaction and presentation", quality: "Quality and review", delivery: "Delivery" },
     },
     architecture: {
       eyebrow: "Architecture and agents",
       title: "AI supports reasoning; it does not replace accountability.",
-      description: "I use AI-assisted tools to speed up exploration, review, and documentation while keeping technical decisions, validation, and context under human control.",
+      description: "The actual workflow combines AGENTS.md rules, decisions in ADRs, Codex-assisted implementation, local validation, human review, and GitHub Actions publishing.",
       steps: [
-        { title: "Set context", description: "Define the objective, constraints, and acceptance criteria before delegating a task." },
-        { title: "Verify", description: "Review results, test assumptions, and confirm impact before adopting a change." },
-        { title: "Record", description: "Turn decisions and lessons into documentation the team can reuse." },
+        { title: "Rules and context", description: "AGENTS.md defines scope, stack, accessibility, documentation, and validation criteria." },
+        { title: "Recorded decisions", description: "ADRs document choices including Vite, Tailwind v4, local i18n, GitHub Pages, and Codex." },
+        { title: "Assisted implementation", description: "Codex inspects the repository and proposes small changes within the defined constraints." },
+        { title: "Validation and review", description: "ESLint and the TypeScript build check changes; human review confirms content and impact." },
+        { title: "Delivery", description: "After approval and a push to main, GitHub Actions builds and publishes the artifact to GitHub Pages." },
       ],
     },
     contact: {

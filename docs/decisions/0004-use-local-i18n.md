@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted for planned implementation
+Accepted and implemented
 
 ## Context
 
@@ -10,11 +10,11 @@ The portfolio needs PT-BR and EN-US content for Brazilian recruiters, US recruit
 
 ## Decision
 
-Use local TypeScript objects for i18n content when the UI is implemented.
+Use local TypeScript objects for i18n content.
 
 ## Consequences
 
 - No CMS or remote translation service is required.
 - Content can be typed and reviewed with normal code changes.
-- Language switching can be implemented without network requests.
-- Documentation must keep this marked as planned until the i18n files and toggle exist.
+- Language switching works without network requests.
+- Shared content contracts keep PT-BR and EN-US structures aligned at build time.

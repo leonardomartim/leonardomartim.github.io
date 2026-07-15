@@ -17,8 +17,8 @@ export function StackSection({ content }: StackSectionProps) {
         </div>
         <dl className="mt-8 grid gap-4 sm:grid-cols-2">
           {stackGroups.map((group) => (
-            <div className="rounded-lg border border-[var(--color-border)] p-5" key={group.name}>
-              <dt className="font-semibold">{group.name}</dt>
+            <div className="rounded-lg border border-[var(--color-border)] p-5" key={group.id}>
+              <dt className="font-semibold">{content.groupLabels[group.id]}</dt>
               <dd className="mt-3 flex flex-wrap gap-2">
                 {group.technologies.map((technology) => (
                   <span className="rounded-full bg-[var(--color-surface-muted)] px-3 py-1 text-sm text-[var(--color-text-muted)]" key={technology}>{technology}</span>

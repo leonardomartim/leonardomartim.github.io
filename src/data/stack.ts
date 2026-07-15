@@ -1,11 +1,11 @@
 export type StackGroup = {
-  name: string;
+  id: "foundation" | "presentation" | "quality" | "delivery";
   technologies: string[];
 };
 
 export const stackGroups: StackGroup[] = [
-  { name: "Backend", technologies: ["Node.js", "TypeScript", "REST APIs"] },
-  { name: "Data", technologies: ["SQL", "PostgreSQL", "Data modeling"] },
-  { name: "Delivery", technologies: ["Git", "GitHub Actions", "Docker"] },
-  { name: "Quality", technologies: ["Testing", "Documentation", "Code review"] },
+  { id: "foundation", technologies: ["React", "TypeScript", "Vite", "Tailwind CSS v4"] },
+  { id: "presentation", technologies: ["Framer Motion", "Lucide React", "Local i18n", "CSS variables"] },
+  { id: "quality", technologies: ["ESLint", "TypeScript build", "Human review", "ADRs"] },
+  { id: "delivery", technologies: ["Git", "GitHub Actions", "GitHub Pages"] },
 ];

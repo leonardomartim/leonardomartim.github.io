@@ -55,7 +55,11 @@ src/
 - `components/` contains reusable layout primitives plus the language and theme controls.
 - `theme/` provides typed theme definitions, CSS-variable application, `localStorage`
   persistence, and a React hook for current theme state.
-- `data/stack.ts` holds language-independent technology groups used by the Stack section.
+- `data/projects.ts` holds typed, bilingual case-study evidence; `types/project.ts` defines
+  statuses, localized fields, optional links, and the case-study contract. The Projects UI
+  renders this structure without owning project content.
+- `data/stack.ts` holds language-independent technologies grouped by practical repository
+  context. Localized group labels remain in `i18n/`.
   `hooks/`, `lib/`, and `utils/` are reserved for their respective feature work.
 
 ## Constraints

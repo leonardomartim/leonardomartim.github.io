@@ -7,14 +7,14 @@ Personal portfolio website for Leonardo Martim, built as a GitHub Pages user sit
 - Vite, React, and TypeScript project scaffold.
 - Tailwind CSS v4 configured through `@tailwindcss/vite`.
 - GitHub Actions workflow for GitHub Pages deployment.
-- A responsive layout shell, language/theme controls, and introductory hero are in place.
-  Remaining portfolio sections are still planned.
+- A responsive portfolio with language/theme controls and all baseline sections is in place.
+- Projects use a typed case-study structure; additional real project content remains pending.
 
-## Planned Product Scope
+## Product Scope
 
-The portfolio is planned to include Header, Hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact, and Footer sections.
+The portfolio includes Header, Hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact, and Footer sections.
 
-Planned behavior includes PT-BR / EN-US language toggle, four visual themes, manual typewriter mode toggle, responsive layout, accessible navigation, SEO metadata, and GitHub Pages deployment.
+Implemented behavior includes the PT-BR / EN-US language toggle, four visual themes, manual typewriter mode toggle, responsive layout, accessible navigation, and GitHub Pages deployment configuration. SEO metadata remains planned.
 
 ## Setup
 

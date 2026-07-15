@@ -14,7 +14,9 @@ The project is in its initial baseline:
 - GitHub Pages deployment workflow exists in `.github/workflows/deploy.yml`.
 - The header, hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact,
   and footer sections are implemented with responsive, localized base content.
-- Project case studies and public contact details remain in progress and are marked in the UI.
+- The Projects section has a typed case-study foundation and currently documents only this
+  repository. External case studies and public contact details remain pending and are marked
+  in the UI.
 
 ## Implemented Sections
 
@@ -30,15 +32,15 @@ The project is in its initial baseline:
 
 ## Planned Content
 
-- Detailed project case studies
+- Additional case studies based on real project information
 - Public contact channels
 
-## Planned Behavior
+## Product Behavior
 
-- PT-BR / EN-US language toggle
-- Four visual themes: Alpine, Paperwarm, Graphite, Terminal
-- Manual typewriter mode toggle
-- Responsive layout
-- Accessible navigation
-- SEO metadata
-- GitHub Pages deployment from `main`
+- PT-BR / EN-US language toggle (implemented)
+- Four visual themes: Alpine, Paperwarm, Graphite, Terminal (implemented)
+- Manual typewriter mode toggle (implemented)
+- Responsive layout (implemented)
+- Accessible navigation (implemented baseline)
+- SEO metadata (planned)
+- GitHub Pages deployment from `main` (configured)

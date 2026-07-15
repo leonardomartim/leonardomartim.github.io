@@ -38,7 +38,7 @@ export function App() {
         <HeroSection content={translation.hero} />
         <AboutSection content={translation.about} />
         <BentoSection content={translation.bento} />
-        <ProjectsSection content={translation.projects} />
+        <ProjectsSection content={translation.projects} language={language} />
         <StackSection content={translation.stack} />
         <ArchitectureSection content={translation.architecture} />
         <ContactSection content={translation.contact} />
