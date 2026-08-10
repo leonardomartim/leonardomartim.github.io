@@ -1,4 +1,4 @@
-export type ThemeName = "alpine" | "paperwarm" | "graphite" | "terminal";
+export type ThemeName = "paperwarm" | "graphite";
 
 export type ThemeToken =
   | "--color-background"

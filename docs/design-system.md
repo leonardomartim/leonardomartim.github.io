@@ -8,21 +8,19 @@ The design system is planned and should be implemented incrementally with the po
 - Global CSS lives in `src/index.css`.
 - Tailwind is loaded with `@import "tailwindcss";`.
 - The theme foundation is implemented with semantic CSS variables in `src/index.css`.
-- `src/theme/` owns the four typed theme definitions, DOM application, persistence, and
+- `src/theme/` owns the two typed theme definitions, DOM application, persistence, and
   current-theme hook.
 
 ## Theme Foundation
 
-- Alpine
 - Paperwarm
 - Graphite
-- Terminal
 
 Theme values are represented by semantic CSS variables. Components should consume those
 variables instead of hardcoded palettes whenever theme behavior is needed.
 
-The layout shell places the theme selector in the header alongside the language
-selector. Final themed visual design and the remaining portfolio components remain planned.
+The layout shell places the theme selector in the header alongside the language selector.
+Stored themes that are no longer supported fall back to Graphite.
 
 ## UI Principles
 
@@ -41,19 +39,7 @@ selector. Final themed visual design and the remaining portfolio components rema
 - The hero fills the available first screen on large viewports and returns to content-led
   spacing on smaller screens where the header height varies.
 - Supporting information uses muted surfaces and accent borders rather than decorative
-  effects, keeping all four themes visually consistent.
-
-## Typewriter Focus Mode
-
-- The header offers an explicit action that opens a separate, document-like focus view.
-- The hero cycles only its highlighted keyword with a restrained erase-and-type cadence;
-  the rest of the headline remains static and its longest localized word reserves layout space.
-- The keyword interaction and focus mode both render static content when reduced motion is preferred.
-- The modal uses native dialog behavior for focus containment, keyboard access, and
-  Escape-to-close support.
-- Only supporting copy inside the document is typed. Its full footprint and accessible
-  text remain available throughout the effect.
-- Reduced-motion preferences render the complete document copy without animation.
+  effects, keeping both themes visually consistent.
 
 ## Styling Rules
 

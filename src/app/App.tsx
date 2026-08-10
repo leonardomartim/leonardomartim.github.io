@@ -1,8 +1,5 @@
-import { useState } from "react";
-
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import { TypewriterFocusMode } from "../components/TypewriterFocusMode";
 import { useLanguage } from "../i18n";
 import { PortfolioLayout } from "../layouts/PortfolioLayout";
 import { AboutSection } from "../sections/AboutSection";
@@ -17,8 +14,6 @@ import { useTheme } from "../theme";
 export function App() {
   const { language, setLanguage, translation } = useLanguage();
   const { theme, setTheme } = useTheme();
-  const [typewriterOpen, setTypewriterOpen] = useState(false);
-
   return (
     <>
       <PortfolioLayout
@@ -29,7 +24,6 @@ export function App() {
             currentTheme={theme}
             onLanguageChange={setLanguage}
             onThemeChange={setTheme}
-            onTypewriterOpen={() => setTypewriterOpen(true)}
             translation={translation}
           />
         }
@@ -43,12 +37,6 @@ export function App() {
         <ArchitectureSection content={translation.architecture} />
         <ContactSection content={translation.contact} />
       </PortfolioLayout>
-      <TypewriterFocusMode
-        content={translation.hero}
-        labels={translation.typewriter}
-        onClose={() => setTypewriterOpen(false)}
-        open={typewriterOpen}
-      />
     </>
   );
 }

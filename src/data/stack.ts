@@ -4,7 +4,7 @@ export type StackGroup = {
 };
 
 export const stackGroups: StackGroup[] = [
-  { id: "foundation", technologies: ["React", "TypeScript", "Vite", "Tailwind CSS v4"] },
+  { id: "foundation", technologies: ["React", "TypeScript", "Vite", "Tailwind CSS v4", "Astro.js"] },
   { id: "presentation", technologies: ["Framer Motion", "Lucide React", "Local i18n", "CSS variables"] },
   { id: "quality", technologies: ["ESLint", "TypeScript build", "Human review", "ADRs"] },
   { id: "delivery", technologies: ["Git", "GitHub Actions", "GitHub Pages"] },

@@ -14,7 +14,15 @@ export function loadTheme(): ThemeName {
 
   const storedTheme = window.localStorage.getItem(themeStorageKey);
 
-  return isTheme(storedTheme) ? storedTheme : defaultTheme;
+  if (isTheme(storedTheme)) {
+    return storedTheme;
+  }
+
+  if (storedTheme !== null) {
+    window.localStorage.setItem(themeStorageKey, defaultTheme);
+  }
+
+  return defaultTheme;
 }
 
 export function saveTheme(theme: ThemeName) {

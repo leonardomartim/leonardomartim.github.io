@@ -2,7 +2,7 @@
 
 This repository contains the personal portfolio website for Leonardo Martim.
 
-The site is intended for Brazilian recruiters, US recruiters, technical interviewers, and engineering leads. Its professional focus is backend development, API design, software architecture, agile planning, and AI-assisted development.
+The site is intended for Brazilian recruiters, US recruiters, technical interviewers, engineering leads, and potential clients. Its professional focus includes websites, apps, internal systems, APIs, software architecture, and AI-assisted development.
 
 ## Current State
 
@@ -14,9 +14,9 @@ The project is in its initial baseline:
 - GitHub Pages deployment workflow exists in `.github/workflows/deploy.yml`.
 - The header, hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact,
   and footer sections are implemented with responsive, localized base content.
-- The Projects section has a typed case-study foundation and currently documents only this
-  repository. External case studies and public contact details remain pending and are marked
-  in the UI.
+- The Projects section has a typed case-study foundation and currently documents this
+  repository. Additional case studies remain planned.
+- The Contact section provides a direct email channel for software-service inquiries.
 
 ## Implemented Sections
 
@@ -33,13 +33,11 @@ The project is in its initial baseline:
 ## Planned Content
 
 - Additional case studies based on real project information
-- Public contact channels
 
 ## Product Behavior
 
 - PT-BR / EN-US language toggle (implemented)
-- Four visual themes: Alpine, Paperwarm, Graphite, Terminal (implemented)
-- Manual typewriter mode toggle (implemented)
+- Two visual themes: Paperwarm and Graphite (implemented)
 - Responsive layout (implemented)
 - Accessible navigation (implemented baseline)
 - SEO metadata (planned)

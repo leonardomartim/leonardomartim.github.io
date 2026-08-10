@@ -10,11 +10,6 @@ export type Translation = {
   languageToggle: {
     label: string;
   };
-  typewriter: {
-    closeLabel: string;
-    modeLabel: string;
-    openLabel: string;
-  };
   navigation: {
     intro: string;
     about: string;
@@ -26,9 +21,6 @@ export type Translation = {
   hero: {
     eyebrow: string;
     title: string;
-    titleKeywords: string[];
-    titlePrefix: string;
-    titleSuffix: string;
     description: string;
     notice: string;
   };
@@ -74,7 +66,8 @@ export type Translation = {
     eyebrow: string;
     title: string;
     description: string;
-    availability: string;
+    cta: string;
+    email: string;
   };
   footer: {
     status: string;
@@ -93,11 +86,6 @@ export const translations: Record<Language, Translation> = {
     languageToggle: {
       label: "Selecionar idioma",
     },
-    typewriter: {
-      closeLabel: "Fechar modo de digitação",
-      modeLabel: "Modo de escrita",
-      openLabel: "Abrir modo de digitação",
-    },
     navigation: {
       intro: "Início",
       about: "Sobre",
@@ -108,35 +96,32 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       eyebrow: "Leonardo Martim · Desenvolvimento de software",
-      title: "Backend, APIs e arquitetura para produtos que precisam evoluir.",
-      titleKeywords: ["evoluir", "escalar", "crescer", "amadurecer", "integrar"],
-      titlePrefix: "Backend, APIs e arquitetura para produtos que precisam ",
-      titleSuffix: ".",
+      title: "Software bem pensado para ideias que precisam sair do papel.",
       description:
-        "Desenvolvedor backend focado em desenhar sistemas claros, integrações confiáveis e entregas com apoio de IA de forma responsável.",
+        "Desenvolvedor focado em entregar sistemas para empresas B2B e clientes B2C, combinando arquitetura, interfaces, APIs e desenvolvimento assistido por IA para transformar ideias em produtos digitais.",
       notice:
-        "O portfólio completo está sendo construído seção por seção. Em breve: projetos selecionados, stack e visão de arquitetura.",
+        "Do planejamento à entrega, com decisões técnicas que acompanham o objetivo de cada produto.",
     },
     about: {
       eyebrow: "Sobre",
-      title: "Sistemas sustentáveis começam com decisões claras.",
+      title: "Estudante de Sistemas de Informação em evolução para o mercado.",
       description:
-        "Meu foco é backend e arquitetura: entender o problema, definir contratos úteis e criar uma base que o time consiga manter e evoluir.",
-      principles: ["Clareza antes de complexidade", "APIs pensadas para quem integra", "Planejamento iterativo e visível"],
+        "Meu foco é construir uma base sólida em engenharia de software, arquitetura, desenvolvimento de produtos digitais e uso responsável de IA no processo de criação.",
+      principles: ["Formação em Sistemas de Informação", "Construção prática de projetos reais", "Visão de produto, código e entrega"],
     },
     bento: {
       title: "Como eu abordo o trabalho",
       items: [
-        { title: "Backend", description: "Serviços, regras de negócio e integrações desenhados com responsabilidade bem definida." },
-        { title: "APIs", description: "Contratos consistentes, erros previsíveis e documentação útil para consumidores." },
+        { title: "Produtos digitais", description: "Sites, apps e sistemas orientados por objetivos claros de negócio e experiência." },
+        { title: "APIs e integrações", description: "Contratos consistentes e conexões confiáveis entre serviços, produtos e pessoas." },
         { title: "Arquitetura", description: "Decisões proporcionais ao contexto, com atenção à evolução do sistema." },
         { title: "Entrega", description: "Pequenas etapas verificáveis, alinhadas ao que gera valor no produto." },
       ],
     },
     projects: {
       eyebrow: "Projetos",
-      title: "Estudos de caso com evidências verificáveis.",
-      description: "Cada caso separa contexto, decisões, limites e validação. Experiências profissionais externas permanecem pendentes até que conteúdo real possa ser publicado.",
+      title: "Projetos que conectam contexto, produto e engenharia.",
+      description: "Cada caso apresenta o problema, as decisões técnicas, os limites e como a solução foi validada.",
       fields: {
         problem: "Problema",
         context: "Contexto",
@@ -151,8 +136,8 @@ export const translations: Record<Language, Translation> = {
     },
     stack: {
       eyebrow: "Stack",
-      title: "Tecnologias que orientam meus estudos e entregas.",
-      description: "Agrupadas pelo uso prático comprovado neste repositório; experiência externa por tecnologia permanece pendente de estudos de caso reais.",
+      title: "Tecnologias para criar produtos digitais de ponta a ponta.",
+      description: "Uma base prática para construir interfaces, integrações, qualidade e entregas consistentes.",
       groupLabels: { foundation: "Base da interface", presentation: "Interação e apresentação", quality: "Qualidade e revisão", delivery: "Entrega" },
     },
     architecture: {
@@ -169,9 +154,10 @@ export const translations: Record<Language, Translation> = {
     },
     contact: {
       eyebrow: "Contato",
-      title: "Vamos conversar sobre um problema que vale resolver.",
-      description: "Os canais públicos de contato estão sendo organizados como parte da evolução deste portfólio.",
-      availability: "Informações de contato serão incluídas em breve.",
+      title: "Vamos conversar?",
+      description: "Se você precisa criar um site, aplicativo, sistema interno, API ou transformar uma ideia em produto digital, posso ajudar a estruturar e desenvolver uma solução clara, funcional e bem pensada.",
+      cta: "Enviar e-mail",
+      email: "contact.martim@gmail.com",
     },
     footer: {
       status: "Portfólio em construção contínua.",
@@ -188,11 +174,6 @@ export const translations: Record<Language, Translation> = {
     languageToggle: {
       label: "Select language",
     },
-    typewriter: {
-      closeLabel: "Close typing mode",
-      modeLabel: "Writing mode",
-      openLabel: "Open typing mode",
-    },
     navigation: {
       intro: "Home",
       about: "About",
@@ -203,35 +184,32 @@ export const translations: Record<Language, Translation> = {
     },
     hero: {
       eyebrow: "Leonardo Martim · Software development",
-      title: "Backend, APIs, and architecture for products built to evolve.",
-      titleKeywords: ["evolve", "scale", "grow", "mature", "integrate"],
-      titlePrefix: "Backend, APIs, and architecture for products built to ",
-      titleSuffix: ".",
+      title: "Thoughtful software for ideas ready to take shape.",
       description:
-        "Backend developer focused on clear systems, reliable integrations, and responsible AI-assisted delivery.",
+        "Developer focused on delivering systems for B2B companies and B2C clients, combining architecture, interfaces, APIs, and AI-assisted development to turn ideas into digital products.",
       notice:
-        "The full portfolio is being built section by section. Selected projects, stack, and architecture insights are coming next.",
+        "From planning to delivery, with technical decisions that support each product’s goals.",
     },
     about: {
       eyebrow: "About",
-      title: "Sustainable systems start with clear decisions.",
+      title: "Information Systems student building market-ready software skills.",
       description:
-        "My focus is backend and architecture: understanding the problem, defining useful contracts, and creating a foundation a team can maintain and evolve.",
-      principles: ["Clarity before complexity", "APIs designed for integrators", "Iterative, visible planning"],
+        "My focus is to build a solid foundation in software engineering, architecture, digital product development, and responsible AI-assisted workflows.",
+      principles: ["Information Systems background", "Practical real-world project building", "Product, code, and delivery mindset"],
     },
     bento: {
       title: "How I approach the work",
       items: [
-        { title: "Backend", description: "Services, business rules, and integrations with clearly defined responsibilities." },
-        { title: "APIs", description: "Consistent contracts, predictable errors, and useful documentation for consumers." },
+        { title: "Digital products", description: "Websites, apps, and systems shaped by clear business and experience goals." },
+        { title: "APIs and integrations", description: "Consistent contracts and reliable connections between services, products, and people." },
         { title: "Architecture", description: "Context-proportionate decisions with attention to how a system evolves." },
         { title: "Delivery", description: "Small, verifiable steps aligned with what creates product value." },
       ],
     },
     projects: {
       eyebrow: "Projects",
-      title: "Case studies backed by verifiable evidence.",
-      description: "Each case separates context, decisions, constraints, and validation. External professional experience remains pending until real content can be published.",
+      title: "Projects that connect context, product, and engineering.",
+      description: "Each case presents the problem, technical decisions, constraints, and how the solution was validated.",
       fields: {
         problem: "Problem",
         context: "Context",
@@ -246,8 +224,8 @@ export const translations: Record<Language, Translation> = {
     },
     stack: {
       eyebrow: "Stack",
-      title: "Technologies that guide my learning and delivery work.",
-      description: "Grouped by practical use demonstrated in this repository; external experience by technology remains pending real case studies.",
+      title: "Technologies for building end-to-end digital products.",
+      description: "A practical foundation for building interfaces, integrations, quality, and consistent delivery.",
       groupLabels: { foundation: "Interface foundation", presentation: "Interaction and presentation", quality: "Quality and review", delivery: "Delivery" },
     },
     architecture: {
@@ -264,9 +242,10 @@ export const translations: Record<Language, Translation> = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Let’s discuss a problem worth solving.",
-      description: "Public contact channels are being organized as part of this portfolio’s ongoing development.",
-      availability: "Contact details will be added soon.",
+      title: "Let’s talk?",
+      description: "If you need a website, app, internal system, API, or want to turn an idea into a digital product, I can help structure and build a clear, functional, and well-designed solution.",
+      cta: "Send email",
+      email: "contact.martim@gmail.com",
     },
     footer: {
       status: "Portfolio under continuous development.",

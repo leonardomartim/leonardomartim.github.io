@@ -14,7 +14,7 @@ Personal portfolio website for Leonardo Martim, built as a GitHub Pages user sit
 
 The portfolio includes Header, Hero, About, Bento grid, Projects, Stack, Architecture / Agents, Contact, and Footer sections.
 
-Implemented behavior includes the PT-BR / EN-US language toggle, four visual themes, manual typewriter mode toggle, responsive layout, accessible navigation, and GitHub Pages deployment configuration. SEO metadata remains planned.
+Implemented behavior includes the PT-BR / EN-US language toggle, Paperwarm and Graphite visual themes, responsive layout, accessible navigation, direct email contact, and GitHub Pages deployment configuration. SEO metadata remains planned.
 
 ## Setup
 

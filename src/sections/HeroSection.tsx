@@ -1,44 +1,9 @@
 import type { Translation } from "../i18n";
 import { Container } from "../components/Container";
-import { useCyclingKeyword } from "../hooks/useCyclingKeyword";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 
 type HeroSectionProps = {
   content: Translation["hero"];
 };
-
-type DynamicKeywordProps = {
-  suffix: string;
-  words: string[];
-};
-
-function DynamicKeyword({ suffix, words }: DynamicKeywordProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const displayedWord = useCyclingKeyword(words, prefersReducedMotion);
-  const longestWord = words.reduce(
-    (longest, word) => (Array.from(word).length > Array.from(longest).length ? word : longest),
-    "",
-  );
-
-  return (
-    <span className="inline-grid whitespace-nowrap text-[var(--color-accent)]">
-      <span className="invisible col-start-1 row-start-1" role="presentation">
-        {longestWord}
-        {suffix}
-        {!prefersReducedMotion && <span className="ml-[0.04em]">|</span>}
-      </span>
-      <span className="col-start-1 row-start-1 justify-self-start">
-        {displayedWord}
-        {suffix}
-        {!prefersReducedMotion && (
-          <span className="ml-[0.04em] text-[var(--color-text-muted)]" role="presentation">
-            |
-          </span>
-        )}
-      </span>
-    </span>
-  );
-}
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
@@ -56,15 +21,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             className="max-w-[17ch] text-[clamp(2.35rem,6vw,4.75rem)] leading-[1.04] font-semibold tracking-[-0.04em] text-balance"
             id="hero-title"
           >
-            <span className="sr-only">{content.title}</span>
-            <span aria-hidden="true">
-              {content.titlePrefix}
-              <DynamicKeyword
-                key={content.titleKeywords[0]}
-                suffix={content.titleSuffix}
-                words={content.titleKeywords}
-              />
-            </span>
+            {content.title}
           </h1>
           <p className="mt-7 max-w-[42rem] text-lg leading-8 text-[var(--color-text-muted)] sm:mt-8 sm:text-xl sm:leading-9">
             {content.description}

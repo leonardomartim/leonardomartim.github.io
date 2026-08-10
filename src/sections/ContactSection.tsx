@@ -16,7 +16,14 @@ export function ContactSection({ content }: ContactSectionProps) {
           <p className="mt-6 text-sm font-semibold tracking-[0.14em] text-[var(--color-accent)] uppercase">{content.eyebrow}</p>
           <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl" id="contact-title">{content.title}</h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">{content.description}</p>
-          <p className="mt-6 text-sm leading-6 text-[var(--color-text-muted)]">{content.availability}</p>
+          <a
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-4 py-2.5 text-sm font-semibold text-[var(--color-background)] transition-colors hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)]"
+            href="mailto:contact.martim@gmail.com?subject=Portfolio%20contact"
+          >
+            {content.cta}
+            <span aria-hidden="true">→</span>
+          </a>
+          <p className="mt-4 text-sm leading-6 text-[var(--color-text-muted)]">{content.email}</p>
         </div>
       </Container>
     </section>

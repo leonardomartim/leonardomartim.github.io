@@ -16,9 +16,14 @@ export function ArchitectureSection({ content }: ArchitectureSectionProps) {
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl" id="architecture-title">{content.title}</h2>
           <p className="mt-5 text-lg leading-8 text-[var(--color-text-muted)]">{content.description}</p>
         </div>
-        <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-6">
           {content.steps.map((step, index) => (
-            <li className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6" key={step.title}>
+            <li
+              className={`rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6 lg:col-span-2 ${
+                index === 3 ? "lg:col-start-2" : ""
+              }`}
+              key={step.title}
+            >
               <div className="flex items-center justify-between text-[var(--color-accent)]">
                 <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
                 <span className="text-sm font-semibold">0{index + 1}</span>

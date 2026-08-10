@@ -1,21 +1,6 @@
 import type { ThemeDefinition, ThemeName } from "../types/theme";
 
 export const themes: Record<ThemeName, ThemeDefinition> = {
-  alpine: {
-    id: "alpine",
-    label: "Alpine",
-    tokens: {
-      "--color-background": "#f4f8f7",
-      "--color-surface": "#ffffff",
-      "--color-surface-muted": "#e6efec",
-      "--color-text": "#17312b",
-      "--color-text-muted": "#557168",
-      "--color-accent": "#087f5b",
-      "--color-accent-muted": "#cce8dd",
-      "--color-border": "#bfd4cc",
-      "--color-ring": "#0ca678",
-    },
-  },
   paperwarm: {
     id: "paperwarm",
     label: "Paperwarm",
@@ -46,22 +31,7 @@ export const themes: Record<ThemeName, ThemeDefinition> = {
       "--color-ring": "#b7d0ff",
     },
   },
-  terminal: {
-    id: "terminal",
-    label: "Terminal",
-    tokens: {
-      "--color-background": "#07110c",
-      "--color-surface": "#0c1a12",
-      "--color-surface-muted": "#11291a",
-      "--color-text": "#d9ffe5",
-      "--color-text-muted": "#8fb79b",
-      "--color-accent": "#42e878",
-      "--color-accent-muted": "#174c28",
-      "--color-border": "#28643b",
-      "--color-ring": "#75f59d",
-    },
-  },
 };
 
 export const themeList = Object.values(themes);
-export const defaultTheme: ThemeName = "alpine";
+export const defaultTheme: ThemeName = "graphite";
